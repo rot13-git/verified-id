@@ -1,0 +1,48 @@
+{
+  "id": "did:web:testverifiedid.azurewebsites.net",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:testverifiedid.azurewebsites.net"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://testverifiedid.azurewebsites.net/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/a2d97136-15d4-4e1f-bee2-e58759555e49"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#661ac0803169417cb114dab9ffbf79c9vcSigningKey-03008",
+      "controller": "did:web:testverifiedid.azurewebsites.net",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "E-EbRY9HSZGI5FZETA7WsY3hFm6Qcy8vut4yMc4GAbQ",
+        "y": "Km-8Lg3wxAPoPpdKB2Jnpo8XVUI-FB6vgpy__fHPM6U"
+      }
+    }
+  ],
+  "authentication": [
+    "#661ac0803169417cb114dab9ffbf79c9vcSigningKey-03008"
+  ],
+  "assertionMethod": [
+    "#661ac0803169417cb114dab9ffbf79c9vcSigningKey-03008"
+  ]
+}
